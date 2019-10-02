@@ -12,3 +12,5 @@ class WeatherIcons extends React.Component {
         Clouds: "wi-day-fog"
     }
 }
+
+export default WeatherIcons;

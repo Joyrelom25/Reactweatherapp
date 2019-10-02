@@ -10,8 +10,9 @@ const API_KEY = "39a3cca998a3e422c540f1b85dc5aa22"
 class App extends React.Component {
 
   state = {
-    rangeId: undefined,
-    icon : undefined,
+
+ /*   rangeId: undefined,
+    icon : undefined, */ 
     temperature: undefined,
     city: undefined,
     country: undefined,
@@ -23,7 +24,7 @@ class App extends React.Component {
 
   }
 
-  getWeatherIcons(icon, rangeId) {
+ /*  getWeatherIcons(icon, rangeId) {
     switch(true) {
       case rangeId >= 200 && rangeId <= 232:
         this.setState({icon: this.WeatherIcons.Thunderstorm})
@@ -48,7 +49,7 @@ class App extends React.Component {
         break;
         default: this.setState({icon: this.WeatherIcons.Clear})
     }
-  }
+  } */
 
   getWeather = async (e) => {
     e.preventDefault();
@@ -61,23 +62,25 @@ class App extends React.Component {
     console.log(data);
       
     this.setState({
-      rangeId: data.weather[0].id,
-      icon : this.getWeatherIcons ,
+
+ /*     rangeId: data.weather[0].id,
+      icon : this.getWeatherIcons , */ 
       temperature: data.main.temp, 
       city: data.name,
       country: data.sys.country,
       description: data.weather[0].description,
       tempmax: data.main.temp_max,
       tempmin: data.main.temp_min,
-      datetime: data.dt,
+      datetime: data.dt*1000,
       error: ""
 
     });
 
     } else {
       this.setState({
-        icon : undefined,
-        temperature: undefined,
+ /*     rangeId: undefined,  
+        icon : undefined, */
+        temperature: undefined, 
         city: undefined,
        country: undefined,
         description: undefined,
@@ -102,7 +105,7 @@ class App extends React.Component {
                <div className = "col-xs-7 form-container">
                <Form getWeather={this.getWeather} / >
                   <Weather
-                      icon = {this.state.icon}
+                     /* icon = {this.state.icon} */ 
                       temperature={this.state.temperature}
                       city= {this.state.city}
                       country= {this.state.country}
