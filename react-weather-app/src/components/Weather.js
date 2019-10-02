@@ -5,6 +5,7 @@ class Weather extends React.Component {
         return(
          <div className = "weather__info"> 
             {this.props.city && this.props.country &&  <p className= "weather__key"> Location : {this.props.city} {this.props.country} </p> }
+            {this.props.icon && <i className= "weather__key">WeatherIcon : {this.props.icon}</i>}
             {this.props.temperature &&  <p className= "weather__key"> Temperature : {this.props.temperature}</p> }
             {this.props.humidity && <p className= "weather__key"> Humidity : {this.props.humidity} </p> }
             {this.props.description &&  <p className= "weather__key">  Description : {this.props.description} </p> }
