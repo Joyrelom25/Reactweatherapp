@@ -15,7 +15,6 @@ class App extends React.Component {
     temperature: undefined,
     city: undefined,
     country: undefined,
-    humidity: undefined,
     description: undefined,
     tempmax: undefined,
     tempmin: undefined,
@@ -63,11 +62,10 @@ class App extends React.Component {
       
     this.setState({
       rangeId: data.weather[0].id,
-      icon : this.getWeatherIcons,
+      icon : this.getWeatherIcons ,
       temperature: data.main.temp, 
       city: data.name,
       country: data.sys.country,
-      humidity: data.main.humidity,
       description: data.weather[0].description,
       tempmax: data.main.temp_max,
       tempmin: data.main.temp_min,
@@ -82,7 +80,6 @@ class App extends React.Component {
         temperature: undefined,
         city: undefined,
        country: undefined,
-       humidity: undefined,
         description: undefined,
        tempmax: undefined,
        tempmin: undefined,
@@ -91,9 +88,6 @@ class App extends React.Component {
       })
     }
   }
-
-
-
 
   render() {
     return(
@@ -112,7 +106,6 @@ class App extends React.Component {
                       temperature={this.state.temperature}
                       city= {this.state.city}
                       country= {this.state.country}
-                      humidity= {this.state.humidity}
                       description= {this.state.description}
                       tempmax = {this.state.tempmax}
                       tempmin = {this.state.tempmin}
