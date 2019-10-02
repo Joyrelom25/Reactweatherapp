@@ -16,6 +16,7 @@ class App extends React.Component {
     description: undefined,
     tempmax: undefined,
     tempmin: undefined,
+    datetime: undefined,
     error: undefined
 
   }
@@ -38,6 +39,7 @@ class App extends React.Component {
       description: data.weather[0].description,
       tempmax: data.main.temp_max,
       tempmin: data.main.temp_min,
+      datetime: data.dt,
       error: ""
 
     });
@@ -51,6 +53,7 @@ class App extends React.Component {
       description: undefined,
       tempmax: undefined,
       tempmin: undefined,
+      datetime: undefined,
       error: "Please enter the values"
       })
     }
@@ -69,6 +72,7 @@ class App extends React.Component {
          description= {this.state.description}
          tempmax = {this.state.tempmax}
          tempmin = {this.state.tempmin}
+         datetime = {this.state.datetime}
          error= {this.state.error} / >
       </div>
     );
