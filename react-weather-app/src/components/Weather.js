@@ -8,6 +8,8 @@ class Weather extends React.Component {
           {this.props.temperature &&  <p>Temperature : {this.props.temperature}</p> }
           {this.props.humidity && <p> Humidity : {this.props.humidity} </p> }
           {this.props.description &&  <p>  Description : {this.props.description} </p> }
+          {this.props.tempmax && <p> Temp max : {this.props.tempmax}</p>}
+          {this.props.tempmin && <p> Temp min : {this.props.tempmin}</p>}
           {this.props.error && <p>{this.props.error}</p>}
         </div>       
         );

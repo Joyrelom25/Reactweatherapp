@@ -14,6 +14,8 @@ class App extends React.Component {
     country: undefined,
     humidity: undefined,
     description: undefined,
+    tempmax: undefined,
+    tempmin: undefined,
     error: undefined
 
   }
@@ -34,6 +36,8 @@ class App extends React.Component {
       country: data.sys.country,
       humidity: data.main.humidity,
       description: data.weather[0].description,
+      tempmax: data.main.temp_max,
+      tempmin: data.main.temp_min,
       error: ""
 
     });
@@ -45,6 +49,8 @@ class App extends React.Component {
       country: undefined,
       humidity: undefined,
       description: undefined,
+      tempmax: undefined,
+      tempmin: undefined,
       error: "Please enter the values"
       })
     }
@@ -61,6 +67,8 @@ class App extends React.Component {
          country= {this.state.country}
          humidity= {this.state.humidity}
          description= {this.state.description}
+         tempmax = {this.state.tempmax}
+         tempmin = {this.state.tempmin}
          error= {this.state.error} / >
       </div>
     );
