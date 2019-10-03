@@ -58,6 +58,11 @@ class App extends React.Component {
     const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
     const data = await api_call.json();
 
+
+    /* var realtajm = new Date();
+    realtajm.setSeconds( datetime );
+    var formatted = realtajm.format("dd.mm.yyyy hh:MM:ss"); */ 
+
     if (city && country ) {
     console.log(data);
       
