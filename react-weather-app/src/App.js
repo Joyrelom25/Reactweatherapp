@@ -1,6 +1,6 @@
 import React from 'react'
 import Titles from './components/Titles'
-import Form from './components/Form'
+// import Form from './components/Form'
 import Weather from './components/Weather'
 import FiveDayWeather from './components/FiveDayWeather'
 import 'weather-icons/css/weather-icons.css'
@@ -86,14 +86,15 @@ class App extends React.Component {
   }
   componentDidMount() {
     this.getWeather();
+    this.getDetail();
   }
 
 
 
   getDetail = async (e) => {
-    e.preventDefault();
-    const cityVal = e.target.elements.city.value;
-    const country = e.target.elements.country.value;
+  //  e.preventDefault();
+    const cityVal = "Stockholm";
+    const country = "Sweden";
     if (cityVal && country) {
       // this.getWeatherIcons(Number(data.weather[0].id));
 
@@ -131,11 +132,11 @@ class App extends React.Component {
           <div className="main">
             <div className="container">
               <div className="row"> </div>
-              <div className="col-xs-5 title-container">
+              <div className="col-xs-2 title-container">
                 <Titles />
               </div>
-              <div className="col-xs-7 form-container">
-                <Form getDetail={this.getDetail} />
+              <div className="col-xs-10 form-container">
+               {/* <Form getDetail={this.getDetail} /> */}
                 <Weather
                   icon={this.state.icon}
                   temperature={this.state.temperature}
