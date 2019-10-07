@@ -14,14 +14,14 @@ export default class WeeklyDetail extends React.Component {
         <div className="col-sm-2">
           <div className="card cardStyle">
             {<h2 className= "weather__key">{this.props.city}</h2>}
-            <h3 className="card-title">{moment(newDate).format('dddd')}</h3>
-            <p className="text-muted">{moment(newDate).format('MMMM Do, h:mm a')}</p>
-            <i className={imgURL}></i>
+            <h3 className="card-title" style={{color: 'pink'}}>{moment(newDate).format('dddd')}</h3>
+            <p className="text-muted" style={{color: 'green'}}>{moment(newDate).format('MMMM Do, h:mm a')}</p>
+            <i className={imgURL} style={{color: 'orange'}}></i>
             <h2 className= "weather__key">{Math.round(info.main.temp - 273.15)}&deg;</h2>
             <h4 className= "weather__key">{Math.round(info.main.temp_min - 273.15)}&deg;</h4>
             <h4 className= "weather__key">{Math.round(info.main.temp_max - 273.15)}&deg;</h4>
             <div>
-              <p className="card-text">{info.weather[0].description}</p>
+              <p className="card-text" style={{color: 'pink'}}>{info.weather[0].description}</p>
             </div>
           </div>
         </div>
