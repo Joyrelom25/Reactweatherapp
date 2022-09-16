@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "moment": "^2.24.0",
     "owfont": "git+https://github.com/websygen/owfont.git",
     "react": "^16.10.1",
